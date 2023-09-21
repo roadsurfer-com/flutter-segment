@@ -1,23 +1,12 @@
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-⚠️ ⚠️
-We are no longer mantaining this library. Feel free to fork it and work on your own branch.
-⚠️ ⚠️
-
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
+This is forket version of https://github.com/la-haus/flutter-segment 
 
 # Segment plugin
 [![Pub Version](https://img.shields.io/pub/v/flutter_segment)](https://pub.dev/packages/flutter_segment)
 [![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
 
-This library was created by our friends at [claimsforce-gmbh](https://github.com/claimsforce-gmbh) to whom we are deeply grateful for letting us contribute. From now this project will be maintained from this repository.
 
 Flutter plugin to support iOS, Android and Web sources at https://segment.com.
 
-### Future development
-We want to prepare flutter-segment for the future!
-Please have a look at [this issue](https://github.com/claimsforce-gmbh/flutter-segment/issues/46) and let us know what you think.
 
 ## Usage
 To use this plugin, add `flutter_segment` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
@@ -86,11 +75,6 @@ class MyApp extends StatelessWidget {
 ```
 
 
-## Migration from `v2.x` to `v3.x`
-In `v3.x` we removed branch io integration as the package is in the the maintenance mode and uses outdated dependencies.
-If you don't use `ENABLE_BRANCH_IO_INTEGRATION` you are good to go.
-If you want to continue using `ENABLE_BRANCH_IO_INTEGRATION` then use `v2.x` of this package.
-
 ## Installation
 Setup your Android, iOS and/or web sources as described at Segment.com and generate your write keys.
 
@@ -122,59 +106,7 @@ void main() {
 }
 ```
 
-### Android _(Deprecated*)_
-```xml
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.flutter_segment_example">
-    <application>
-        <activity>
-            [...]
-        </activity>
-        <meta-data android:name="com.claimsforce.segment.WRITE_KEY" android:value="YOUR_WRITE_KEY_GOES_HERE" />
-        <meta-data android:name="com.claimsforce.segment.TRACK_APPLICATION_LIFECYCLE_EVENTS" android:value="false" />
-        <meta-data android:name="com.claimsforce.segment.ENABLE_AMPLITUDE_INTEGRATION" android:value="false" />
-        <meta-data android:name="com.claimsforce.segment.DEBUG" android:value="false" />
-    </application>
-</manifest>
-```
 
-### iOS _(Deprecated*)_
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-  [...]
-  <key>com.claimsforce.segment.WRITE_KEY</key>
-  <string>YOUR_WRITE_KEY_GOES_HERE</string>
-  <key>com.claimsforce.segment.TRACK_APPLICATION_LIFECYCLE_EVENTS</key>
-  <false/>
-  <key>com.claimsforce.segment.ENABLE_AMPLITUDE_INTEGRATION</key>
-  <false/>
-  [...]
-</dict>
-</plist>
-```
-
-### Web
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  [...]
-</head>
-<body>
-<script>
-  !function(){ ...;
-    analytics.load("YOUR_WRITE_KEY_GOES_HERE");
-    analytics.page();
-  }}();
-</script>
-  <script src="main.dart.js" type="application/javascript"></script>
-</body>
-</html>
-
-```
-For more informations please check: https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/quickstart/
 
 ## Sending device tokens strings for push notifications
 Segment integrates with 3rd parties that allow sending push notifications.
@@ -243,11 +175,3 @@ SegmentDefaultOptions.instance.options = {
   }
 }
 ```
-
-## Issues
-Please file any issues, bugs, or feature requests in the [GitHub repo](https://github.com/claimsforce-gmbh/flutter-segment/issues/new).
-
-## Contributing
-If you wish to contribute a change to this repo, please send a [pull request](https://github.com/claimsforce-gmbh/flutter-segment/pulls).
-
-_<sup>*</sup>This installation method will be removed, please use the [Installation via Dart Code](#via-dart-code) instructions._
